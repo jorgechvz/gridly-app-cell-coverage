@@ -203,7 +203,7 @@ export default function App() {
         (margin || 0) + (cableLoss || 0) + (additionalLoss || 0) + Lb;
 
       const azimuth = calculateAzimuth(latitude, longitude, testLat, testLng);
-      // type: ignore
+      // @ts-ignore
       let bestSectorCenter = 0;
       let minAngleDiff = 9999;
       for (let s = 0; s < numSectors; s++) {
