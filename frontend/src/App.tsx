@@ -291,8 +291,6 @@ export default function App() {
       )
     );
   };
-
-  // Nuevo método para actualizar rotación del sector
   const updateSectorRotation = (rotation: number) => {
     if (selectedTowerId === null) return;
     setCellTowers((prev) =>
@@ -329,7 +327,7 @@ export default function App() {
             }
           },
           updateSelectedTowerScenario,
-          updateSectorRotation, // Proveer el método al contexto
+          updateSectorRotation, 
         }}
       >
         <AppSidebar />

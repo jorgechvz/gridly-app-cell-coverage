@@ -5,8 +5,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// Okumura-Hata formulas converted to TypeScript
-
 export function distanceOh(
   L_fsl: number,
   Lb_area: number,
