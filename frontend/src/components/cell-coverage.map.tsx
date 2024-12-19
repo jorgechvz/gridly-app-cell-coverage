@@ -65,8 +65,7 @@ export default function CellCoverageMap({
     return () => clearTimeout(timeout);
   }, [state]);
 
-  const MAPBOX_ACCESS_TOKEN =
-    "pk.eyJ1Ijoiam9yZ2VjaHZ6IiwiYSI6ImNtNGlsNjJmejAzZ2oyanB6b2pmeG12emsifQ.XYX1mAie5MUgmNHwznYZ4g";
+  const MAPBOX_ACCESS_TOKEN = import.meta.env.VITE_MAP_BOX_TOKEN;
 
   const heatmapLayer: LayerProps = {
     id: "coverage-heatmap",
@@ -120,7 +119,7 @@ export default function CellCoverageMap({
           onLoad={() => {
             // Solo hacemos el cálculo aquí si es la primera vez
             if (mapRef.current) {
-               calculateCoverage();
+              calculateCoverage();
             }
           }}
         >
